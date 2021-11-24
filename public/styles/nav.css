@@ -12,3 +12,8 @@ span {
   font-family: 'Bungee', cursive, sans-serif;
   color: #FFFFFF;
 }
+
+.heading {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
