@@ -1,9 +1,11 @@
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #4056A1;
   height: 120px;
   width: 100vw;
+  
 }
 
 span {
@@ -13,7 +15,32 @@ span {
   color: #FFFFFF;
 }
 
+.boldtitle {
+  display: flex;
+  margin-left: 0em;
+  margin-right: 0em;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 .heading {
-  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  font-family: sans-serif;
+  margin-left: 0.4em;
   font-size: 20px;
+  font-weight: 200;
+}
+
+.container1 {
+  display: flex;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-angle-double-down{
+  color: red;
 }
