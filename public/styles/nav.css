@@ -4,8 +4,9 @@ nav {
   justify-content: space-between;
   background-color: #4056A1;
   height: 120px;
-  width: 100vw;
-  
+  width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 span {
