@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  display: flex;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -27,8 +28,19 @@ body {
 
  body {
   font-family: 'Source Sans Pro', sans-serif;
+  align-items: center;
  }
 
  nav {
   font-family: 'Bungee', cursive, sans-serif;
+ }
+
+ main {
+   display: flex;
+   max-width: 90%;
+   background-color: #f4f1ec;
+ }
+
+ .practice-class .nested-class{
+  background-color: red;
  }

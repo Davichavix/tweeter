@@ -1,11 +1,28 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 400px;
+  height: 520px;
   width: 100%;
   background-color: darkgoldenrod;
   flex-direction: column;
   position: absolute;
-  z-index: -1;
+  top: 0px;
+  z-index: 0;
+}
+
+h2 {
+  display: flex;
+  font-family: sans-serif;
+  color: white;
+  margin-left: 0.4em;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.avatar {
+  margin-top: 120px;
+}
+
+.name {
+  display: flex;
 }
