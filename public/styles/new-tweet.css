@@ -34,6 +34,10 @@ form {
   flex-direction: column;
 }
 
+form label {
+  font-size: 20px;
+}
+
 .counter {
   font-family: 'Bungee', cursive, sans-serif;
 }
