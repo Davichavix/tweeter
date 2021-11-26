@@ -20,6 +20,8 @@ textarea {
   outline: none;
   background-color: #f4f1ec;
   margin-bottom: 0.5em;
+  resize: none;
+  font-size: 15px;
 }
 
 .new-tweet {
