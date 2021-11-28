@@ -48,3 +48,43 @@ form label {
   display: flex;
   justify-content: space-between;
 }
+
+main .tweet {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-style: solid;
+  align-items: flex-start;
+  border: gray;
+  border-width: 10px;
+  height: 150px;
+  width: 100%;
+  border: 3px solid #545149;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 50px;
+  width: 95%;
+  font-size: 15px;
+}
+
+main .tweet img {
+  display: flex;
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+}
+
+main .tweet .name-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

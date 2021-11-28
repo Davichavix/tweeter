@@ -1,4 +1,4 @@
-header {
+.main-header {
   display: flex;
   align-items: center;
   height: 520px;
@@ -6,9 +6,9 @@ header {
   background-color: darkgoldenrod;
   flex-direction: column;
   position: absolute;
-  top: 0px;
   z-index: 0;
   background-image: url("/images/45-degree-fabric-dark.png");
+  justify-content: center;
 }
 
 h2 {
