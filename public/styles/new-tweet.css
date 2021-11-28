@@ -68,8 +68,8 @@ main header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
   margin-right: 50px;
   width: 95%;
   font-size: 15px;
@@ -87,4 +87,12 @@ main .tweet .name-profile {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+main .tweet label {
+  margin-left: 40px
+}
+
+main .tweet .name-handle {
+  color: gray;
 }
