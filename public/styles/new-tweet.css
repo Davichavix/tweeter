@@ -75,6 +75,10 @@ main header {
   font-size: 15px;
 }
 
+main .tweet:hover {
+  box-shadow: 5px 5px gray;
+}
+
 main .tweet img {
   display: flex;
   max-width: 40px;
