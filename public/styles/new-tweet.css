@@ -89,10 +89,34 @@ main .tweet .name-profile {
   align-items: center;
 }
 
+main footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 70%;
+  padding-right: 20px;
+}
+
+main .tweet .tweet-footer {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
 main .tweet label {
   margin-left: 40px
 }
 
 main .tweet .name-handle {
   color: gray;
+}
+
+main .footer-logo {
+  color:royalblue;
+}
+
+main .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+  color: orange;
 }
