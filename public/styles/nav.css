@@ -5,7 +5,8 @@ nav {
   background-color: #4056A1;
   height: 120px;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 1;
 }
 
@@ -31,6 +32,8 @@ span {
   font-size: 20px;
   font-weight: 200;
 }
+
+
 
 
 .container2 {
