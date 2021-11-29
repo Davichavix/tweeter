@@ -64,6 +64,11 @@ main .tweet {
   font-size: 20px;
 }
 
+main #tweets-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 main header {
   display: flex;
   justify-content: space-between;
