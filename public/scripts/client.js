@@ -23,3 +23,9 @@ console.log($tweet);
 $(document).ready(function () {
   $('#tweets-container').append($tweet);
 })
+
+const createTweetElement = function(tweet) {
+  let $tweet = $(`<article class="tweets">${tweet.content.text}</article>`);
+
+  return $tweet;
+};
