@@ -15,3 +15,11 @@ const tweetData = {
     },
   "created_at": 1461116232227
 }
+
+const $tweet = $(`<article class="tweets">${tweetData.content.text}</article>`);
+console.log($tweet);
+
+
+$(document).ready(function () {
+  $('#tweets-container').append($tweet);
+})
