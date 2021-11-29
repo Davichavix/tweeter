@@ -29,21 +29,27 @@ const data = [
   }
 ]
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 
 const createTweetElement = function(tweet) {
   const $tweet = $(
     `<div class="tweet">
     <header>
     <div class="name-profile">
-    <img src=${tweet.user.avatars}>
+    <img src=${escape(tweet.user.avatars)}>
     <p>${tweet.user.name}</p>
     </div>
-    <p class="name-handle">${tweet.user.handle}</p>
+    <p class="name-handle">${escape(tweet.user.handle)}</p>
     </header>
-    <label>${tweet.content.text}</label>
+    <label>${escape(tweet.content.text)}</label>
     <footer>
     <div class="tweet-footer">
-    <p>${timeago.format(tweet.created_at)}</p>
+    <p>${escape(timeago.format(tweet.created_at))}</p>
     </div>
     <div class="footer-logo">
     <i class="fas fa-flag fa-xs"></i>
@@ -77,7 +83,7 @@ const createTweetElement = function(tweet) {
       } else {
       let tweetSerial = $(this).serialize();
       $.post("/tweets", tweetSerial); // Cant see request body in devtools?
-      }
       loadTweets(renderTweets);
+    }
     })
   })
