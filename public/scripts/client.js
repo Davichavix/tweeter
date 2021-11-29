@@ -64,7 +64,7 @@ const createTweetElement = function(tweet) {
   }
 
   const loadTweets = function(cb) {
-    $.get("http://localhost:8080/tweets", function(data) {
+    $.get("/tweets", function(data) {
       cb(data);
     })
   }
@@ -72,6 +72,9 @@ const createTweetElement = function(tweet) {
   $(document).ready(function () {
     $("#tweet-forms").submit(function (event) {
       event.preventDefault();
+      if (!$(this).val() || $(this).val().length > 140) {
+        alert("Tweet Length Invalid");
+      }
       let tweetSerial = $(this).serialize();
       $.post("/tweets", tweetSerial); // Cant see request body in devtools?
     })
