@@ -129,3 +129,20 @@ main .footer-logo {
 main .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
   color: orange;
 }
+
+main #tweet-forms {
+  margin-top: 50px;
+}
+
+main .new-tweet .error-msg{
+  display: none;
+  border-style: solid;
+  align-items: center;
+  border-width: 10px;
+  height: 30px;
+  width: 100%;
+  border: 3px solid red;
+  margin-top: 50px;
+  font-size: 15px;
+  color: red;
+}
