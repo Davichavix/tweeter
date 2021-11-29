@@ -16,16 +16,35 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
-const $tweet = $(`<article class="tweets">${tweetData.content.text}</article>`);
-console.log($tweet);
-
-
-$(document).ready(function () {
-  $('#tweets-container').append($tweet);
-})
 
 const createTweetElement = function(tweet) {
-  let $tweet = $(`<article class="tweets">${tweet.content.text}</article>`);
+  const $tweet = $(
+    `<div class="tweet">
+    <header>
+    <div class="name-profile">
+    <img src=${tweet.user.avatars}>
+    <p>${tweet.user.name}</p>
+    </div>
+    <p class="name-handle">${tweet.user.handle}</p>
+    </header>
+    <label>${tweet.content.text}</label>
+    <footer>
+    <div class="tweet-footer">
+    <p>${tweet.created_at}</p>
+    </div>
+    <div class="footer-logo">
+    <i class="fas fa-flag fa-xs"></i>
+    <i class="fas fa-retweet fa-xs"></i>
+    <i class="fas fa-heart fa-xs"></i>
+    </div>
+    </footer>
+    </div>`)
+    
+    return $tweet;
+  }
 
-  return $tweet;
-};
+  const $tweet = createTweetElement(tweetData);
+
+  $(document).ready(function () {
+    $('#tweets-container').append($tweet);
+  })
