@@ -72,11 +72,12 @@ const createTweetElement = function(tweet) {
   $(document).ready(function () {
     $("#tweet-forms").submit(function (event) {
       event.preventDefault();
-      if (!$(this).val() || $(this).val().length > 140) {
+      if ($('#tweet-text').val().length === 0 || $('#tweet-text').val().length > 140) {
         alert("Tweet Length Invalid");
-      }
+      } else {
       let tweetSerial = $(this).serialize();
       $.post("/tweets", tweetSerial); // Cant see request body in devtools?
+      }
+      loadTweets(renderTweets);
     })
-    loadTweets(renderTweets);
   })
