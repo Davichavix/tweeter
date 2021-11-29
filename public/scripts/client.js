@@ -66,6 +66,8 @@ const createTweetElement = function(tweet) {
   $(document).ready(function () {
     $("#tweet-forms").submit(function (event) {
       event.preventDefault();
+      let tweetSerial = $(this).serialize();
+      $.post("/tweets", tweetSerial); // Cant see request body in devtools?
     })
     renderTweets(data);
   })
