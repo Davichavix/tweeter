@@ -17,6 +17,10 @@ span {
   color: #FFFFFF;
 }
 
+.title {
+ margin-top: 70px;
+}
+
 .boldtitle {
   display: flex;
   margin-left: 0em;
@@ -31,6 +35,10 @@ span {
   margin-left: 0.4em;
   font-size: 20px;
   font-weight: 200;
+}
+
+.container1 {
+  height: 50px
 }
 
 .container2 {
