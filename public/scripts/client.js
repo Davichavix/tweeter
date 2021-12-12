@@ -91,11 +91,11 @@ const createTweetElement = function(tweet) {
       event.preventDefault();
       if ($('#tweet-text').val().length === 0) {
         $('.error-msg').empty();
-        $('.error-msg').append('tweet cannot be empty').slideDown();
+        $('.error-msg').append('❌ tweet cannot be empty ❌').slideDown();
       } 
       if ($('#tweet-text').val().length > 140) {
         $('.error-msg').empty();
-        $('.error-msg').append('tweet must be under 140 characters').slideDown();
+        $('.error-msg').append('❌ tweet must be under 140 characters ❌').slideDown();
       } else {
       const tweetSerial = $(this).serialize();
       $.post('/tweets', tweetSerial)
