@@ -71,14 +71,14 @@ const createTweetElement = function(tweet) {
     }
   }
 
-  const loadTweets = function() {
+  const loadTweets = function(cb) {
     $.ajax({
       url: '/tweets',
       method: 'GET',
       dataType: 'json',
       success: (tweets) => {
         console.log(tweets)
-        renderTweets(tweets);
+        cb(tweets);
       },
       error : (error) => {
         console.log(error);
@@ -89,14 +89,20 @@ const createTweetElement = function(tweet) {
   $(document).ready(function () {
     $("#tweet-forms").on('submit', function (event) {
       event.preventDefault();
-      if ($('#tweet-text').val().length === 0 || $('#tweet-text').val().length > 140) {
-        $('.error-msg').slideDown();
+      if ($('#tweet-text').val().length === 0) {
+        $('.error-msg').empty();
+        $('.error-msg').append('tweet cannot be empty').slideDown();
+      } 
+      if ($('#tweet-text').val().length > 140) {
+        $('.error-msg').empty();
+        $('.error-msg').append('tweet must be under 140 characters').slideDown();
       } else {
       const tweetSerial = $(this).serialize();
       $.post('/tweets', tweetSerial)
         .then(() => {
           $('.error-msg').slideUp();
-          loadTweets();
+          loadTweets(renderTweets);
+          $('#tweet-text').val('');
         });
       }
     })
