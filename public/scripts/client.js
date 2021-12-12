@@ -95,7 +95,7 @@ const createTweetElement = function(tweet) {
       } 
       if ($('#tweet-text').val().length > 140) {
         $('.error-msg').empty();
-        $('.error-msg').append('❌ tweet must be under 140 characters ❌').slideDown();
+        $('.error-msg').append('❌ tweet must be 140 characters or under ❌').slideDown();
       } else {
       const tweetSerial = $(this).serialize();
       $.post('/tweets', tweetSerial)
