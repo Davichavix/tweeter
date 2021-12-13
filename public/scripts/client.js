@@ -62,6 +62,7 @@ const createTweetElement = function(tweet) {
   }
 
   $(document).ready(function () {
+    loadTweets(renderTweets);
     $("#tweet-forms").on('submit', function (event) {
       event.preventDefault();
       

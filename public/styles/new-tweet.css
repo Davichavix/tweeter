@@ -88,12 +88,15 @@ main .tweet img {
   max-height: 2em;
   width: auto;
   height: auto;
+  margin-right: 0.4em;
 }
 
 main .tweet .name-profile {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 0.8em;
+  font-weight: 100;
 }
 
 main footer {
@@ -111,7 +114,7 @@ main .tweet .tweet-footer {
   display: flex;
   flex-direction: row;
   font-size: 0.5em;
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 
 main .tweet label {
@@ -126,6 +129,7 @@ main .tweet label {
 
 main .tweet .name-handle {
   color: gray;
+  font-size: 0.8em;
 }
 
 main .footer-logo {
