@@ -34,6 +34,10 @@ body {
   align-items: flex-start;
  }
 
+ /* .mainbody {
+   display: flex;
+   flex-direction: column;
+ } */
 
  nav {
   font-family: 'Bungee', cursive, sans-serif;
@@ -42,7 +46,6 @@ body {
  main.container{
    display: flex;
    margin-top: 520px;
-   z-index: 1;
    height: 100%;
    justify-content: center;
    flex-direction: column;
@@ -54,3 +57,21 @@ body {
  main h2 {
    color: gray;
  }
+
+ /* @media only screen and (min-width: 1024px){
+  .mainbody {
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+  }
+  main.container {
+    margin-top: 120px;
+  }
+
+  header .main-header{
+    display: flex;
+    width: 50%;
+    height: 200px;
+  }
+
+} */

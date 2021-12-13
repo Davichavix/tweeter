@@ -6,17 +6,15 @@
   background-color: darkgoldenrod;
   flex-direction: column;
   position: absolute;
-  z-index: 0;
   background-image: url("/images/always-grey.png");
   justify-content: center;
 }
 
 .name {
   display: flex;
-  height: 80px;
   font-family: sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 1em;
   font-weight: 200;
   align-content: center;
 }

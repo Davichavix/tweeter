@@ -64,11 +64,13 @@ const createTweetElement = function(tweet) {
   $(document).ready(function () {
     $("#tweet-forms").on('submit', function (event) {
       event.preventDefault();
-      if ($('#tweet-text').val().length === 0) {
+      
+      // checks if tweet is empty or only blank characters
+      if ($('#tweet-text').val().length === 0 || $('#tweet-text').val().trim().length === 0) {
         $('.error-msg').empty();
         $('.error-msg').text('❌ tweet cannot be empty ❌').slideDown();
       } 
-      if ($('#tweet-text').val().length > 140) {
+      else if ($('#tweet-text').val().length > 140) {
         $('.error-msg').empty();
         $('.error-msg').text('❌ tweet must be 140 characters or under ❌').slideDown();
       } else {
