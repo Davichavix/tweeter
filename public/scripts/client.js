@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -73,11 +72,12 @@ const createTweetElement = function(tweet) {
         $('.error-msg').empty();
         $('.error-msg').text('❌ tweet must be 140 characters or under ❌').slideDown();
       } else {
-      const tweetSerial = $(this).serialize();
-      $.post('/tweets', tweetSerial)
+        const tweetSerial = $(this).serialize();
+        $.post('/tweets', tweetSerial)
         .then(() => {
           $('.error-msg').slideUp();
           loadTweets(renderTweets);
+          $('.counter').text(140);
           $('#tweet-text').val('');
         });
       }

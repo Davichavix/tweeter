@@ -122,6 +122,8 @@ main .tweet label {
   flex-flow: column wrap;
   font-size: 15px;
   width: 90%;
+  margin-bottom: 1em;
+  word-break: break-word;
 }
 
 main .tweet .name-handle {
