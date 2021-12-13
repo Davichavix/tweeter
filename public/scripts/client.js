@@ -4,13 +4,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// escape function to prevent cross-site scripting
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-
+// creates tweet element which will be prepended to tweets-container
 const createTweetElement = function(tweet) {
   const $tweet = $(
     `<div class="tweet">
@@ -37,6 +38,7 @@ const createTweetElement = function(tweet) {
     return $tweet;
   }
 
+  // function loops through all existing tweets and prepends to tweets-container
   const renderTweets = function(tweets) {
     $container = $('#tweets-container');
     $container.empty();
@@ -46,13 +48,14 @@ const createTweetElement = function(tweet) {
     }
   }
 
+// AJAX call to GET tweets as JSON data
+// Takes renderTweets as argument
   const loadTweets = function(cb) {
     $.ajax({
       url: '/tweets',
       method: 'GET',
       dataType: 'json',
       success: (tweets) => {
-        console.log(tweets)
         cb(tweets);
       },
       error : (error) => {
@@ -62,7 +65,11 @@ const createTweetElement = function(tweet) {
   }
 
   $(document).ready(function () {
+
+    // loads existing tweets on page refresh
     loadTweets(renderTweets);
+
+    // event handler for TWEET button
     $("#tweet-forms").on('submit', function (event) {
       event.preventDefault();
       
@@ -71,16 +78,22 @@ const createTweetElement = function(tweet) {
         $('.error-msg').empty();
         $('.error-msg').text('❌ tweet cannot be empty ❌').slideDown();
       } 
+
+      // checks if tweet is over 140 chars
       else if ($('#tweet-text').val().length > 140) {
         $('.error-msg').empty();
         $('.error-msg').text('❌ tweet must be 140 characters or under ❌').slideDown();
       } else {
         const tweetSerial = $(this).serialize();
+
+        // if no error post new tweet to page
         $.post('/tweets', tweetSerial)
         .then(() => {
           $('.error-msg').slideUp();
           loadTweets(renderTweets);
           $('.counter').text(140);
+
+          // resets tweet textarea to empty on successful post
           $('#tweet-text').val('');
         });
       }

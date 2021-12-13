@@ -134,6 +134,7 @@ main .tweet .name-handle {
 
 main .footer-logo {
   color:royalblue;
+  font-size: 0.7em;
 }
 
 main .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
