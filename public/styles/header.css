@@ -1,11 +1,10 @@
 .main-header {
   display: flex;
   align-items: center;
-  height: 520px;
+  height: 400px;
   width: 100%;
   background-color: darkgoldenrod;
   flex-direction: column;
-  position: absolute;
   background-image: url("/images/always-grey.png");
   justify-content: center;
 }
@@ -19,8 +18,8 @@
   align-content: center;
 }
 
-.avatar {
+.avatar img{
   margin-top: 120px;
-  height: 256px;
+  height: 7em;
+  width: auto;
 }
-

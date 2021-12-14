@@ -2,7 +2,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4056A1;
   height: 120px;
   width: 100%;
   position: fixed;
@@ -16,10 +15,6 @@ span {
   margin-right: 1.5em;
   font-family: 'Bungee', cursive, sans-serif;
   color: #FFFFFF;
-}
-
-.title {
- margin-top: 70px;
 }
 
 .boldtitle {
@@ -51,3 +46,4 @@ span {
 .fa-angle-double-down{
   color: red;
 }
+
