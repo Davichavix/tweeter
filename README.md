@@ -37,3 +37,6 @@ Tweeter Tablet Version
 - Express
 - Node 5.10.x or above
 - Nodemon
+- body-parser
+- chance
+- md5
