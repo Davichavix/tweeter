@@ -8,6 +8,8 @@ nav {
   top: 0;
   z-index: 10;
   color: #FFFFFF;
+  background-color: darkgoldenrod;
+  background-image: url("/images/foggy-birds.png");
 }
 
 span {
