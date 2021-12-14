@@ -9,7 +9,7 @@ Tweeter frontend uses responsive design
 - screen widths above 1024px (Desktops) will show a 2 column page
 
 Tweet limitations
-- Tweets are limitied to 140 charcaters or below
+- Tweets are limited to 140 characters or below
 - Blank tweets are not permitted and will not post
 
 Tweeter Functionality
