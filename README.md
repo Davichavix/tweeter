@@ -18,7 +18,10 @@ Tweeter Functionality
 
 ## Final Product
 
+Tweeter Desktop Version
 !["screenshot of Tweeter front page Desktop"](https://github.com/Davichavix/tweeter/blob/main/docs/Tweeter-front-page-desktop-version.png?raw=true)
+
+Tweeter Tablet Version
 !["screenshot of Tweeter front page Tablet"](https://github.com/Davichavix/tweeter/blob/main/docs/Tweeter-front-page-tablet-version.png?raw=true)
 
 ## Getting Started
