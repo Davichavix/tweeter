@@ -2,8 +2,8 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-HTML, CSS, JS, jQuery and AJAX front-end
-Node, Express back-end
+- HTML, CSS, JS, jQuery and AJAX front-end
+- Node, Express back-end
 
 Tweeter frontend uses responsive design 
 - screen widths below 1024px will be single column with nav bar removed
